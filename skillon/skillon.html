@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="./skillon.css" type="stylesheet" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0%;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+        text-transform: capitalize;
+      }
+
+   
+      .navbar-brand h2 {
+        color: rgb(45, 199, 186);
+      }
+      .navbar-nav {
+        margin: 0 10px 0 auto;
+      }
+      .navbar-nav li {
+        margin: 0 10px;
+      }
+      .nav-item.nav-link:hover{
+        color: rgb(14, 222, 222);
+      }
+      .features {
+        margin: 0;
+        padding: 60px 0;
+        position: relative;
+        background-color: rgb(224, 224, 224);
+      }
+      .features-heading {
+        position: relative;
+      }
+
+      .features-content {
+        display: flex;
+        margin-top: 60px;
+      }
+      .features-content div {
+        margin: 5px;
+      }
+      .features-content div i{
+        font-size: 30px;
+        margin: 0 50px;
+      
+      }
+
+      .about-us-content{
+        margin: 50px 0;
+      }
+      @media screen and (max-width:576px) {
+         .features-content{
+        display: block;
+        margin: 10px;
+       } .about-us-content .image1,
+        .about-us-content .image2{
+            display: block;
+        }
+ 
+
+     .cups{
+        display: flex;
+        flex-direction: column;
+     }
+     .services-body {
+        display: flex;
+        flex-direction: column;
+     }
+
+
+        
+      }
+
+      .image1,.image2{
+        display: flex;
+        margin: 10px;
+    
+      }
+     .image1 img,
+     .image2 img{
+       width: 200px;
+       margin: 10px;
+
+      }
+     .image1{
+        margin-bottom: 40px;
+     }
+     .our-team{
+        background: url(./images/2150.webp);
+        background-position: center;
+        background-size: cover;
+     }
+     .card{
+        margin: 20px;
+     }
+     .cups{
+        text-align: center;
+        background-color: rgb(123, 125, 124,.5);
+        display: flex;
+        padding: 30px;
+        justify-content: space-evenly;
+     }
+     .cups-content {
+        background-color: rgb(67, 67, 67);
+        margin: 10px;
+     }
+   
+     .cups i{
+        font-size: 20px;
+        color: white;
+     }
+     .services-body div i{
+        padding: 10px;
+     }
+     .services-body div{
+        margin: 10px;
+        position: relative;
+     }
+     .ui button{
+        margin: 10px;
+     }
+     .portfolio {
+      background-color: azure;
+     
+      }
+     .portfolio-footer img{
+        margin: 10px;
+        height: 300px;
+        border-radius: 5px;
+     }
+     .choose-plan {
+      background-image: url(./images/pexels-photo-255464.webp);
+      background-position: center;
+      background-size: cover;
+      
+     }
+     .choose-plan div{
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+
+     }
+     .choose-plan div .cardb{
+        background-color: azure;
+        padding: 30px;
+        margin: 10px;
+        border-radius: 4px;
+     }
+     .choose-plan div .cardb .btn{
+      background-color: rgb(24, 23, 23,.6);
+      padding:5px 20px;
+     }
+     .client{
+   
+      background-color: rgb(61, 70, 70);
+      text-align: center;
+      color: white;
+     }
+     .client-body{
+      margin:50px auto;
+     }
+
+     .client-body img{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 4px solid white;
+     }
+     .client-body input{
+      width: 15px;
+      height: 15px;
+      border-radius:0%;
+     }
+
+     .sub form input{
+      width: 80%;
+      margin: 20px auto;
+      background-color: rgb(252, 247, 247);
+      padding: 10px;
+      padding-left: 50px;
+
+     }
+
+     .sub form textarea{
+      width: 80%;
+      margin: 40px auto;
+      height:200px;
+      display:block;
+      padding-left: 50px;
+     }
+     .sub form button{
+      background-color: aliceblue;
+      padding: 10px 20px;
+     }
+     .sub form label{
+      position: relative;
+     }
+     .sub form label i{
+     position: absolute;
+     left:-100px;
+     top: 40px;
+     visibility: hidden;
+
+     }
+     .contact {
+      background-color: rgb(19, 144, 211);
+      position: relative;
+     }
+     .top a i{
+      position:fixed;
+      padding:  13px 15px;
+      font-size: 20px;
+      bottom: 20px;
+      right: 20px;
+      background-color: black;
+      border-radius: 50%;
+      padding: auto;
+      color: white;
+     }
+
+
+
+
+  
+    
+
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid w-100 bg-light">
+      <nav class="navbar  navbar-expand-lg navbar-light bg light">
+        <div class="navbar-brand">
+          <h2>awesome</h2>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-target="#awesome-menu"
+          data-bs-toggle="collapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="awesome-menu">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="" id="home">home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">about</a></li>
+            <li class="nav-item"><a class="nav-link" href="#team">team</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#portfolio">portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#client">client</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="features">
+        <h1 class="features-heading text-center display-3">features</h1>
+        <div class="features-content">
+          <div>
+            <i class="fa-solid fa-thumbs-up"></i>
+            <h3>elegant</h3>
+            <p>
+              we development html template following coding standard which is
+              w<sub>3</sub>cvalidated
+            </p>
+          </div>
+          <div>
+            <i class="fa-solid fa-laptop"></i>
+            <h3>responsive</h3>
+            <p>
+              html template following coding standard which is w<sub>3</sub>c
+              validated
+            </p>
+          </div>
+          <div>
+            <i class="fa-solid fa-gift"></i>
+            <h3>modern</h3>
+            <p>
+              we development html template following coding standard which is
+              w<sub>3</sub>cvalidated
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="about-us" id="about">
+        <div class="about-head text-center">
+          <p class="display-3">about us</p>
+          <h5>
+            awesome is a creative work our experts develop premium wordpress
+            themes.html 5 templates,psd design,plugin and apps for our valuable
+            customer.
+          </h5>
+        </div>
+        <div class="about-us-content">
+          <div class="image1">
+            <div>
+              <img src="./images/pexels-lukas-1420702.jpg" alt="" class=""/>
+              </div>
+              <div>
+               <h5>who we are</h5>
+                <h6>a strong team to keep promise surronding the world .we developed a wide range of web product morbi accumsan ipsum velit.nam nec tellus a odic auctor a ornare odio.sed non mauris vitae erta consequte auctor eu in elit class aptent tactic</h6>
+            </div>
+            </div>
+            <div class="image2">
+                <div>
+                <h5>who we are</h5>
+                
+                <h6>a strong team to keep promise surronding the world .we developed a wide range of web product morbi accumsan ipsum velit.nam nec tellus a odic auctor a ornare odio.sed non mauris it class aptent tacti</h6>
+            </div>
+            <div>
+                <img src="./images/pexels-lukas-1420702.jpg" alt="" class=""/>
+            </div>
+          </div> 
+      </div>
+      <div class="our-team text-center " id="team">
+       <div class="our-team-head text-light my-5">
+        <h2 class="display-3 pt-5">our team</h2>
+        <h5>
+            awesome is a creative work our experts develop premium wordpress
+            themes.html 5 templates,psd design,plugin and apps for our valuable
+            customer.
+          </h5>
+       </div>
+       <div class="card-group">
+         <div class="card">
+            <img  class="card-img-top"src="./images/HD-wallpaper-goku-ani-anime-ball-black-blue-dbz-dragon-dragon-ball-super-ultra.jpg" alt="">
+            <div class="card-body">
+            <p class="card-title">
+                web developer
+            </p>
+            <p class="card-subtitle">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia laborum consequuntur quas aliquam.
+            </p>
+        </div>
+        </div>
+        <div class="card">
+            <img  class="card-img-top"src="./images/HD-wallpaper-goku-ani-anime-ball-black-blue-dbz-dragon-dragon-ball-super-ultra.jpg" alt="">
+            <div class="card-body">
+            <p class="card-title">
+                web developer
+            </p>
+            <p class="card-subtitle">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia laborum consequuntur quas aliquam.
+            </p>
+        </div>
+        </div>
+        <div class="card">
+            <img  class="card-img-top"src="./images/HD-wallpaper-goku-ani-anime-ball-black-blue-dbz-dragon-dragon-ball-super-ultra.jpg" alt="">
+            <div class="card-body">
+            <p class="card-title">
+                web developer
+            </p>
+            <p class="card-subtitle">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia laborum consequuntur quas aliquam.
+            </p>
+        </div>
+        </div>
+        <div class="card">
+            <img  class="card-img-top"src="./images/HD-wallpaper-goku-ani-anime-ball-black-blue-dbz-dragon-dragon-ball-super-ultra.jpg" alt="">
+            <div class="card-body">
+            <p class="card-title">
+                web developer
+            </p>
+            <p class="card-subtitle">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia laborum consequuntur quas aliquam.
+            </p>
+        </div>
+        </div>
+       </div>
+       <div class="cups text-light ">
+        <div class="d-flex cups-content">
+            <div>
+                <i class="fa-solid fa-user"></i>
+           
+        </div>
+        <div>
+            <p>3214<sup>+</sup></p>
+            <p>cups of tea consumed</p>
+        </div>
+        </div>
+        <div class="d-flex cups-content">
+            <div>
+                <i class="fa-solid fa-user"></i>
+            
+            </div>
+        <div>
+            <p>3214<sup>+</sup></p>
+            <p>project completed</p>
+        </div>
+        </div>
+        <div class="d-flex cups-content">
+            <div>
+                <i class="fa-solid fa-user"></i>
+        </div>
+        <div>
+            <p>3214<sup>+</sup></p>
+            <p>clients works with</p>
+        </div>
+        </div>
+        <div class="d-flex cups-content">
+            <div>
+                <i class="fa-solid fa-user"></i>
+             
+        </div>
+        <div>
+            <p>3214<sup>+</sup></p>
+            <p>award won</p>
+        </div>
+        </div>
+       </div>
+      </div>
+      <div class="services text-center" id="services">
+        <div class="services-head">
+            <h2 class="display-3">services</h2>
+            <h5>
+                awesome is a creative work our experts develop premium wordpress
+                themes.html 5 templates,psd design,plugin and apps for our valuable
+                customer.
+              </h5>
+        </div>
+        <div class="services-body d-flex">
+         <div>
+            <i class="fa-solid fa-pen"></i>
+            <h4>web development</h4>
+            <p> html template following coding standard which is w<sub>3</sub>c
+              validated</p>
+         </div>
+         <div>
+            <i class="fa-solid fa-flask-vial"></i>
+            <h4>web development</h4>
+            <p> html template following coding standard which is w<sub>3</sub>c
+              validated</p>
+         </div>
+         <div>
+            <i class="fa-solid fa-shield-halved"></i>
+            <h4>web development</h4>
+            <p> html template following coding standard which is w<sub>3</sub>c
+              validated</p>
+         </div>
+        </div>
+      </div>
+      <div class="portfolio text-center" id="portfolio">
+        <div class="portfolio-head">
+            <h2 class="display-3">portfolio</h2>
+            <h5>
+                awesome is a creative work our experts develop premium wordpress
+                themes.html 5 templates,psd design,plugin and apps for our valuable
+                customer.
+              </h5>
+        </div>
+        <div class="portfolio-body mt-5">
+         <div class="ui">
+            <button type="button" class="btn btn-outline-primary">all</button>
+            <button type="button" class="btn btn-outline-primary">illustrator</button>
+            <button type="button" class="btn btn-outline-primary">ui/ux design</button>
+            <button type="button" class="btn btn-outline-primary">video</button>
+            <button type="button" class="btn btn-outline-primary">web design</button>
+        </div>
+        <div class="portfolio-footer mt-4">
+            <img src="./images/432916120e527d4bb0a0f0aeba822d33.jpeg"class="img-fluid" alt="">
+            <img src="./images/a40515f2a399ce10669f4f4e9754f0b4.jpeg"class="img-fluid" alt="">
+            <img src="./images/c974c6045b4df0d8e8a2e8aa27e30798.jpeg"class="img-fluid" alt="">
+            <img src="./images/b89df65820e3851620a7a8defa9ed9ce.jpeg"class="img-fluid" alt="">
+            <img src="./images/b89df65820e3851620a7a8defa9ed9ce.jpeg"class="img-fluid" alt="">
+            <img src="./images/c974c6045b4df0d8e8a2e8aa27e30798.jpeg"class="img-fluid" alt="">
+            <img src="./images/a40515f2a399ce10669f4f4e9754f0b4.jpeg"class="img-fluid" alt="">
+            <img src="./images/432916120e527d4bb0a0f0aeba822d33.jpeg"class="img-fluid" alt="">
+
+        </div>
+    </div>
+    
+    </div>
+    <div class="choose-plan text-center">
+      <p class="display-5 text-light">choose plan</p>
+      <div class="d-flex">
+      <div class="cardb">
+        <i class="fa-solid fa-laptop"></i>
+        <h3>basic</h3>
+        <h5><span> 5 </span> domain uses <br>
+        14+<span> wordpress </span>theme<br>
+      34+<span>html</span>template<br>
+     <span>2tb</span> of storage</h5>
+     <button type="button" class="btn ">sign in</button>
+      </div>
+      <div class="cardb">
+        <i class="fa-solid fa-laptop"></i>
+        <h3>basic</h3>
+        <h5><span> 5 </span> domain uses <br>
+        14+<span> wordpress </span>theme<br>
+      34+<span>html</span>template<br>
+     <span>2tb</span> of storage</h5>
+     <button type="button" class="btn ">sign in</button>
+      </div>
+      <div class="cardb">
+        <i class="fa-solid fa-laptop"></i>
+        <h3>basic</h3>
+        <h5><span> 5 </span> domain uses <br>
+        14+<span> wordpress </span>theme<br>
+      34+<span>html</span>template<br>
+     <span>2tb</span> of storage</h5>
+     <button type="button" class="btn ">sign in</button>
+      </div>
+      <div class="cardb">
+        <i class="fa-solid fa-laptop"></i>
+        <h3>basic</h3>
+        <h5><span> 5 </span> domain uses <br>
+        14+<span> wordpress </span>theme<br>
+      34+<span>html</span>template<br>
+     <span>2tb</span> of storage</h5>
+     <button type="button" class="btn ">sign in</button>
+      </div>
+    </div>
+    <div class="client" id="client">
+      <div class="client-content">
+        <h2 class="display-3">client</h2>
+        <h5>
+            awesome is a creative work our experts develop premium wordpress
+            themes.html 5 templates,psd design,plugin and apps for our valuable
+            customer.
+          </h5>
+      </div>
+      <div class="client-body">
+        <img src="./images/Elon-Musk-2022.webp" alt="">
+        <h4>we developed awesome html template following coding standard which is w<sub>3</sub>c validated</h4>
+        <h3>elon musk</h3>
+        <input type="radio" name="group">
+        <input type="radio" name="group">
+        <input type="radio" name="group">
+      </div>
+    </div>
+    <div class="contact mb-1 pb-3" id="contact">
+      <div class="contact-content text-light">
+        <h2 class="display-3">contact</h2>
+        <h5>
+            awesome is a creative work our experts develop premium wordpress
+            themes.html 5 templates,psd design,plugin and apps for our valuable
+            customer.
+          </h5>
+      </div>
+      <div class="sub ">
+        <form action="" method="get">
+          <label for="name"><i class="fa-solid fa-user"></i></label>
+          <input type="text" class="form-control" id="name" placeholder="your name">
+          <label for="name"><i class="fa-solid fa-envelope"></i></label>
+          <input type="text" class="form-control" id="name" placeholder="your email">
+          <label for="name"><i class="fa-light fa-webhook"></i></label>
+          <input type="text" class="form-control" id="name" placeholder="your subject">
+          <label for="name"><i class="fa-solid fa-browser"></i></label>
+          <input type="text" class="form-control" id="name" placeholder="your website">
+          <textarea placeholder="write your message" ></textarea>
+          <button type="submit" class="btn">send message</button>
+        </form>
+      </div>
+    </div>
+    <div class="top">
+      <a href="#home"><i class="fa-sharp fa-solid fa-arrow-up"></i></a>
+    </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
